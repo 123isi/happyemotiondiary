@@ -1,8 +1,8 @@
-// src/pages/new/new.jsx
+
 import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../compoment/header/header.jsx'
-import { DiaryContext } from '../../main.jsx'    // ← 동일한 파일에서 import
+import { DiaryContext } from '../../main.jsx'    
 
 import img1 from '../../assets/emotion1.png'
 import img2 from '../../assets/emotion2.png'

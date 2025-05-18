@@ -43,14 +43,14 @@ export default function Edit() {
       <Header
         title="일기 수정하기"
         leftChild={<button onClick={onCancel}>&lt; 뒤로가기</button>}
-        rightChild={<button style={{ background:'#e57373', color:'#fff' }} onClick={onDelete}>삭제하기</button>}
+        rightChild={<button style={{ background:'#e57373', color:'#fff' ,border:'none'}} onClick={onDelete}>삭제하기</button>}
       />
       <p>오늘의 날짜</p>
       <input type="date" value={date} onChange={e => setDate(e.target.value)} />
       <p>오늘의 감정</p>
       <div style={{ display:'flex', gap:8 }}>
         {Object.entries(emotions).map(([val, src]) => (
-          <label key={val} style={{ padding:8, background: emotion===val? '#ffe082':'#f5f5f5', borderRadius:4 }}>
+          <label key={val} style={{ padding:8, borderRadius:4 }}>
             <input type="radio" name="emotion" value={val} checked={emotion===val} onChange={()=>setEmotion(val)} />
             <img src={src} alt={val} width={40} />
           </label>
